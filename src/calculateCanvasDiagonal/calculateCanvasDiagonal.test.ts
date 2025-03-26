@@ -1,4 +1,4 @@
-import calculateCanvasDiagonal from './calculateCanvasDiagonal';
+import { calculateCanvasDiagonal } from './calculateCanvasDiagonal';
 
 describe('calculateCanvasDiagonal', () => {
   
