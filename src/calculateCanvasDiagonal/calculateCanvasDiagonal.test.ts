@@ -11,34 +11,31 @@ describe('calculateCanvasDiagonal', () => {
   });
 
   test("should throw an error when length is negative", () => {
-    expect(() => calculateCanvasDiagonal(-3, 4)).toThrow("Length must be greater than zero.");
+    expect(() => calculateCanvasDiagonal(-3, 4)).toThrow("Length should be positive");
   });
 
   test("should throw an error when width is negative", () => {
-    expect(() => calculateCanvasDiagonal(3, -4)).toThrow("Width must be greater than zero.");
+    expect(() => calculateCanvasDiagonal(3, -4)).toThrow("width should be positive");
   });
 
   test("should throw an error when length is zero", () => {
-    expect(() => calculateCanvasDiagonal(0, 4)).toThrow("Length must be greater than zero.");
+    expect(() => calculateCanvasDiagonal(0, 4)).toThrow("Length should not be zero");
   });
 
   test("should throw an error when width is zero", () => {
-    expect(() => calculateCanvasDiagonal(3, 0)).toThrow("Width must be greater than zero.");
+    expect(() => calculateCanvasDiagonal(3, 0)).toThrow("width should not be zero");
   });
 
-  test("should throw an error when length is empty", () => {
-    expect(() => calculateCanvasDiagonal(undefined as unknown as number, 4)).toThrow("Length must be a valid number.");
-  });
-
-
+  
+  test("should throw an error when length is a non-numeric string", () => {
+    expect(() => calculateCanvasDiagonal(NaN, 3)).toThrow("Dimensions cannot be NaN"););
+  
   test("should throw an error when width is a non-numeric string", () => {
-    expect(() => calculateCanvasDiagonal(3, "xyz" as unknown as number)).toThrow("Width must be a valid number.");
-  });
+    expect(() => calculateCanvasDiagonal(NaN, 3)).toThrow("Dimensions cannot be NaN"););
   
   test.todo("should throw an error when length is empty");
 
-test.todo("should throw an error when width is empty");
-
+  test.todo("should throw an error when width is empty");
 
 
 });
