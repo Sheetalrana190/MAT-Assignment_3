@@ -1,7 +1,8 @@
 import calculateCanvasDiagonal from './calculateCanvasDiagonal';
 
 describe('calculateCanvasDiagonal', () => {
-  test('should calculate diagonal correctly for positive values', () => {
+  // I m giveing correct Test todolist bellow
+  /*test('should calculate diagonal correctly for positive values', () => {
     expect(calculateCanvasDiagonal('3', '4')).toBeCloseTo(5);
     expect(calculateCanvasDiagonal('6', '8')).toBeCloseTo(10);
     expect(calculateCanvasDiagonal('5', '12')).toBeCloseTo(13);
@@ -21,5 +22,26 @@ describe('calculateCanvasDiagonal', () => {
     expect(calculateCanvasDiagonal('a', '4')).toBeNaN();
     expect(calculateCanvasDiagonal('3', 'b')).toBeNaN();
     expect(calculateCanvasDiagonal('a', 'b')).toBeNaN();
-  });
+  });*/
+  
+  test.todo("should calculate diagonal correctly");
+
+  test.todo("should throw an error when length is negative");
+
+test.todo("should throw an error when width is negative");
+
+test.todo("should throw an error when length is zero");
+
+test.todo("should throw an error when width is zero");
+
+test.todo("should throw an error when length is empty");
+
+test.todo("should throw an error when width is empty");
+
+test.todo("should throw an error when length is a non-numeric string");
+
+test.todo("should throw an error when width is a non-numeric string");
+
+
+  
 });
